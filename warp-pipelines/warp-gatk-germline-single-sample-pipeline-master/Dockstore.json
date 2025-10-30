@@ -1,0 +1,66 @@
+{
+  "WholeGenomeGermlineSingleSample.references": {
+    "calling_interval_list": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_calling_regions.hg38.interval_list",
+    "haplotype_database_file": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/haplotype-database/Homo_sapiens_assembly38.haplotype_database.txt",
+    "dbsnp_vcf": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dbSNP-and-index/Homo_sapiens_assembly38.dbsnp138.vcf",
+    "dbsnp_vcf_index": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dbSNP-and-index/Homo_sapiens_assembly38.dbsnp138.vcf.idx",
+    "known_indels_sites_vcfs": [
+      "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/indels-and-index/Homo_sapiens_assembly38.known_indels.vcf.gz",
+      "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/indels-and-index/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
+    ],
+    "known_indels_sites_indices": [
+      "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/indels-and-index/Homo_sapiens_assembly38.known_indels.vcf.gz.tbi",
+      "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/indels-and-index/Mills_and_1000G_gold_standard.indels.hg38.vcf.tbi"
+    ],
+    "reference_fasta": {
+      "ref_fasta": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta",
+      "ref_dict": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.dict",
+      "ref_alt": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.alt",
+      "ref_ann": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.ann",
+      "ref_sa": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.sa",
+      "ref_amb": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.amb",
+      "ref_str": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.str",
+      "ref_pac": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.pac",
+      "ref_bwt": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.bwt",
+      "ref_fasta_index": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.fai"
+    },
+    "contamination_sites_ud": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/contamination/1000g.phase3.100k.b38.vcf.gz.dat.UD",
+    "contamination_sites_mu": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/contamination/1000g.phase3.100k.b38.vcf.gz.dat.mu",
+    "contamination_sites_bed": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/contamination/1000g.phase3.100k.b38.vcf.gz.dat.bed",
+    "evaluation_interval_list": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_evaluation_regions.hg38.interval_list"
+  },
+  
+  "WholeGenomeGermlineSingleSample.sample_and_unmapped_bams": {
+    "final_gvcf_base_name": "SRR32255563_blend_seq_ILMN_wggss_dragen_max_qual_01",
+    "unmapped_bam_suffix": ".unmapped.bam",
+    "flowcell_unmapped_bams": [
+      "/home/darja/nas1/blendseq/data/unaligned-bam/SRR32255563_blend_seq_ILMN.unmapped.bam"
+    ],
+    "sample_name": "HG002",
+    "base_file_name": "SRR32255563_blend_seq_ILMN"
+  },
+  
+  "WholeGenomeGermlineSingleSample.wgs_coverage_interval_list": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list",
+  
+  "WholeGenomeGermlineSingleSample.dragmap_reference": {
+    "reference_bin": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref-hash-table/reference.bin",
+    "hash_table_cfg_bin": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref-hash-table/hash_table.cfg.bin",
+    "hash_table_cmp": "/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref-hash-table/hash_table.cmp"
+  },
+
+  "WholeGenomeGermlineSingleSample.dragen_maximum_quality_mode": true,
+  
+  "WholeGenomeGermlineSingleSample.papi_settings": {
+    "preemptible_tries": 3,
+    "agg_preemptible_tries": 3
+  },
+  
+  "WholeGenomeGermlineSingleSample.scatter_settings": {
+    "haplotype_scatter_count": 6,
+    "break_bands_at_multiples_of": 1000000
+  },
+
+  "WholeGenomeGermlineSingleSample.cloud_provider": "local",
+  "WholeGenomeGermlineSingleSample.BamToGvcf.HaplotypeCallerGATK4.memory_multiplier": 2,
+  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.memory_mb": 64000 
+}
