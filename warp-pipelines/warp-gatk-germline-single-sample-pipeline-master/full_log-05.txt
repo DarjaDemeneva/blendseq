@@ -1,0 +1,210 @@
+/usr/bin/docker
+Docker version 28.3.2, build 578ccf6
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+darja
+uid=1027(darja) gid=1028(darja) groups=1028(darja),998(docker),1031(msc22),1039(lasr)
+/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp
+WARNING: Docker is not running. If this workflow uses Docker, it will fail.
+Created temporary working directory at '/tmp/15674660912118256777'
+Successfully downloaded files for entry 'github.com/broadinstitute/warp/WholeGenomeGermlineSingleSample'
+Creating directories for run of Dockstore launcher in current working directory: /tmp/15674660912118256777
+Provisioning your input files to your local machine
+Downloading: WholeGenomeGermlineSingleSample.wgs_coverage_interval_list from /home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list to: /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell-input/ef02378f-7add-41de-b224-0ae0e23ab69e/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list
+Checksums validated.
+Calling out to Cromwell to run your workflow
+Executing: java -Dconfig.file=/home/darja/.cromwell.conf -jar /home/darja/.dockstore/libraries/cromwell-84.jar run --inputs /tmp/foo720562838859739255json /tmp/15674660912118256777/pipelines/broad/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl
+[2025-07-29 16:15:34,57] [info] Running with database db.url = jdbc:hsqldb:mem:f8e139e4-7742-4a5c-8f2b-f9353aa0da86;shutdown=false;hsqldb.tx=mvcc
+[2025-07-29 16:15:36,55] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+[2025-07-29 16:15:36,56] [info] [RenameWorkflowOptionsInMetadata] 100%
+[2025-07-29 16:15:36,76] [info] Running with database db.url = jdbc:hsqldb:mem:8ae428b3-49d0-4563-8f0c-1d6b20235400;shutdown=false;hsqldb.tx=mvcc
+[2025-07-29 16:15:37,18] [info] Slf4jLogger started
+[2025-07-29 16:15:37,32] [info] Workflow heartbeat configuration:
+{
+  "cromwellId" : "cromid-d16f22e",
+  "heartbeatInterval" : "2 minutes",
+  "ttl" : "10 minutes",
+  "failureShutdownDuration" : "5 minutes",
+  "writeBatchSize" : 10000,
+  "writeThreshold" : 10000
+}
+[2025-07-29 16:15:37,37] [info] Metadata summary refreshing every 1 second.
+[2025-07-29 16:15:37,38] [info] No metadata archiver defined in config
+[2025-07-29 16:15:37,38] [info] No metadata deleter defined in config
+[2025-07-29 16:15:37,38] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
+[2025-07-29 16:15:37,38] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
+[2025-07-29 16:15:37,40] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
+[2025-07-29 16:15:37,44] [info] JobRestartCheckTokenDispenser - Distribution rate: 50 per 1 seconds.
+[2025-07-29 16:15:37,45] [info] JobExecutionTokenDispenser - Distribution rate: 20 per 10 seconds.
+[2025-07-29 16:15:37,49] [info] SingleWorkflowRunnerActor: Version 84
+[2025-07-29 16:15:37,51] [info] SingleWorkflowRunnerActor: Submitting workflow
+[2025-07-29 16:15:37,58] [info] Unspecified type (Unspecified version) workflow 582d64a0-a1a8-40b8-8e0e-e82351b99da2 submitted
+[2025-07-29 16:15:37,61] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2m582d64a0-a1a8-40b8-8e0e-e82351b99da2[0m
+[2025-07-29 16:15:37,62] [info] 1 new workflows fetched by cromid-d16f22e: 582d64a0-a1a8-40b8-8e0e-e82351b99da2
+[2025-07-29 16:15:37,63] [info] WorkflowManagerActor: Starting workflow [38;5;2m582d64a0-a1a8-40b8-8e0e-e82351b99da2[0m
+[2025-07-29 16:15:37,63] [info] WorkflowManagerActor: Successfully started WorkflowActor-582d64a0-a1a8-40b8-8e0e-e82351b99da2
+[2025-07-29 16:15:37,63] [info] Retrieved 1 workflows from the WorkflowStoreActor
+[2025-07-29 16:15:37,66] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
+[2025-07-29 16:15:37,73] [info] MaterializeWorkflowDescriptorActor [[38;5;2m582d64a0[0m]: Parsing workflow as WDL 1.0
+[2025-07-29 16:15:39,21] [info] MaterializeWorkflowDescriptorActor [[38;5;2m582d64a0[0m]: Call-to-Backend assignments: VariantCalling.MergeBamouts -> Local, SplitLargeReadGroup.GatherMonolithicBamFile -> Local, VariantCalling.MergeVCFs -> Local, WholeGenomeGermlineSingleSample.CollectWgsMetrics -> Local, VariantCalling.DragstrAutoCalibration -> Local, UnmappedBamToAlignedBam.CreateSequenceGroupingTSV -> Local, VariantCalling.HaplotypeCallerGATK4 -> Local, BamToCram.ValidateCram -> Local, WholeGenomeGermlineSingleSample.PresetArgumentsError -> Local, UnmappedBamToAlignedBam.CrossCheckFingerprints -> Local, VariantCalling.HaplotypeCallerGATK3 -> Local, AggregatedBamQC.CollectReadgroupBamQualityMetrics -> Local, VariantCalling.ScatterIntervalList -> Local, AggregatedBamQC.CollectAggregationMetrics -> Local, BamToCram.CheckPreValidation -> Local, SplitLargeReadGroup.SamSplitter -> Local, UnmappedBamToAlignedBam.SortSampleBam -> Local, WholeGenomeGermlineSingleSample.CollectRawWgsMetrics -> Local, UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba -> Local, UnmappedBamToAlignedBam.GatherBamFiles -> Local, VariantCalling.ErrorMessageIncorrectInput -> Local, AggregatedBamQC.CheckFingerprintTask -> Local, UnmappedBamToAlignedBam.BaseRecalibrator -> Local, UnmappedBamToAlignedBam.CollectQualityYieldMetrics -> Local, UnmappedBamToAlignedBam.MarkDuplicates -> Local, VariantCalling.Reblock -> Local, UnmappedBamToAlignedBam.CollectUnsortedReadgroupBamQualityMetrics -> Local, AggregatedBamQC.CalculateReadGroupChecksum -> Local, UnmappedBamToAlignedBam.ApplyBQSR -> Local, SplitLargeReadGroup.SamToFastqAndBwaMemAndMba -> Local, UnmappedBamToAlignedBam.CheckContamination -> Local, VariantCalling.SortBamout -> Local, VariantCalling.ValidateVCF -> Local, VariantCalling.DragenHardFilterVcf -> Local, UnmappedBamToAlignedBam.SamToFastqAndBwaMemAndMba -> Local, UnmappedBamToAlignedBam.GatherBqsrReports -> Local, BamToCram.ConvertToCram -> Local, SplitLargeReadGroup.SamToFastqAndDragmapAndMba -> Local, WholeGenomeGermlineSingleSample.DragenModeVariantCallingAndGATK3Error -> Local, VariantCalling.CollectVariantCallingMetrics -> Local
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,34] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [disks, memory, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [disks, memory, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [memory, disks, preemptible] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, bootDiskSizeGb, disks, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, disks, cpu, memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:39,35] [[38;5;220mwarn[0m] Local [[38;5;2m582d64a0[0m]: Key/s [preemptible, memory, disks] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+[2025-07-29 16:15:42,46] [info] Not triggering log of restart checking token queue status. Effective log interval = None
+[2025-07-29 16:15:42,46] [info] Not triggering log of execution token queue status. Effective log interval = None
+[2025-07-29 16:15:44,66] [info] cc64541c-9be8-466f-b8b2-dd7a364c7267-SubWorkflowActor-SubWorkflow-UnmappedBamToAlignedBam:-1:1 [[38;5;2mcc64541c[0m]: Starting UnmappedBamToAlignedBam.CreateSequenceGroupingTSV
+[2025-07-29 16:15:47,47] [info] Assigned new job execution tokens to the following groups: 582d64a0: 1
+[2025-07-29 16:15:47,82] [info] cc64541c-9be8-466f-b8b2-dd7a364c7267-SubWorkflowActor-SubWorkflow-UnmappedBamToAlignedBam:-1:1 [[38;5;2mcc64541c[0m]: Starting UnmappedBamToAlignedBam.CollectQualityYieldMetrics
+[2025-07-29 16:15:48,63] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CreateSequenceGroupingTSV:NA:1]: Unrecognized runtime attribute keys: preemptible, memory
+[2025-07-29 16:15:48,67] [[38;5;220mwarn[0m] Localization via hard link has failed: /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/inputs/513623413/Homo_sapiens_assembly38.dict -> /home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.dict: Invalid cross-device link
+[2025-07-29 16:15:48,71] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CreateSequenceGroupingTSV:NA:1]: [38;5;5mpython3 <<CODE
+with open("/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/inputs/513623413/Homo_sapiens_assembly38.dict", "r") as ref_dict_file:
+    sequence_tuple_list = []
+    longest_sequence = 0
+    for line in ref_dict_file:
+        if line.startswith("@SQ"):
+            line_split = line.split("\t")
+            # (Sequence_Name, Sequence_Length)
+            sequence_tuple_list.append((line_split[1].split("SN:")[1], int(line_split[2].split("LN:")[1])))
+    longest_sequence = sorted(sequence_tuple_list, key=lambda x: x[1], reverse=True)[0][1]
+# We are adding this to the intervals because hg38 has contigs named with embedded colons and a bug in GATK strips off
+# the last element after a :, so we add this as a sacrificial element.
+hg38_protection_tag = ":1+"
+# initialize the tsv string with the first sequence
+tsv_string = sequence_tuple_list[0][0] + hg38_protection_tag
+temp_size = sequence_tuple_list[0][1]
+for sequence_tuple in sequence_tuple_list[1:]:
+    if temp_size + sequence_tuple[1] <= longest_sequence:
+        temp_size += sequence_tuple[1]
+        tsv_string += "\t" + sequence_tuple[0] + hg38_protection_tag
+    else:
+        tsv_string += "\n" + sequence_tuple[0] + hg38_protection_tag
+        temp_size = sequence_tuple[1]
+# add the unmapped sequences as a separate line to ensure that they are recalibrated as well
+with open("sequence_grouping.txt","w") as tsv_file:
+  tsv_file.write(tsv_string)
+  tsv_file.close()
+
+tsv_string += '\n' + "unmapped"
+
+with open("sequence_grouping_with_unmapped.txt","w") as tsv_file_with_unmapped:
+  tsv_file_with_unmapped.write(tsv_string)
+  tsv_file_with_unmapped.close()
+CODE[0m
+[2025-07-29 16:15:48,80] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CreateSequenceGroupingTSV:NA:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV:/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV:delegated \
+  us.gcr.io/broad-dsp-gcr-public/base/python@sha256:fb93bc3355b7be7a57176b0a590014fab53117217e796087d1100d9bb2cfe875 /cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CreateSequenceGroupingTSV/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2025-07-29 16:15:51,90] [info] 445d787b-b780-4843-8b31-2948f719a83c-SubWorkflowActor-SubWorkflow-SplitRG:0:1 [[38;5;2m445d787b[0m]: Starting SplitLargeReadGroup.SamSplitter
+[2025-07-29 16:15:52,43] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CreateSequenceGroupingTSV:NA:1]: job id: 477152
+[2025-07-29 16:15:52,44] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CreateSequenceGroupingTSV:NA:1]: Status change from - to Done
+[2025-07-29 16:15:57,47] [info] Assigned new job execution tokens to the following groups: 582d64a0: 2
+[2025-07-29 16:15:58,04] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CollectQualityYieldMetrics:0:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2025-07-29 16:15:58,05] [[38;5;220mwarn[0m] Localization via hard link has failed: /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/inputs/-1455029170/SRR32255563_blend_seq_ILMN.unmapped.bam -> /home/darja/nas1/blendseq/data/unaligned-bam/SRR32255563_blend_seq_ILMN.unmapped.bam: Invalid cross-device link
+[2025-07-29 16:15:58,08] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2m445d787b[0mSplitLargeReadGroup.SamSplitter:NA:1]: Unrecognized runtime attribute keys: preemptible, disks, memory
+[2025-07-29 16:15:58,09] [[38;5;220mwarn[0m] Localization via hard link has failed: /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/inputs/-1455029170/SRR32255563_blend_seq_ILMN.unmapped.bam -> /home/darja/nas1/blendseq/data/unaligned-bam/SRR32255563_blend_seq_ILMN.unmapped.bam: Invalid cross-device link
+[2025-07-29 16:16:45,38] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m445d787b[0mSplitLargeReadGroup.SamSplitter:NA:1]: [38;5;5mset -e
+mkdir output_dir
+
+total_reads=$(samtools view -c /cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/inputs/-1455029170/SRR32255563_blend_seq_ILMN.unmapped.bam)
+
+java -Dsamjdk.compression_level=2 -Xms3000m -Xmx3600m -jar /usr/gitc/picard.jar SplitSamByNumberOfReads \
+  INPUT=/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/inputs/-1455029170/SRR32255563_blend_seq_ILMN.unmapped.bam \
+  OUTPUT=output_dir \
+  SPLIT_TO_N_READS=48000000 \
+  TOTAL_READS_IN_INPUT=$total_reads[0m
+[2025-07-29 16:16:45,39] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m445d787b[0mSplitLargeReadGroup.SamSplitter:NA:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter:/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter:delegated \
+  us.gcr.io/broad-gotc-prod/samtools-picard-bwa@sha256:68eae459869592a095b75598039a65e02dede4f6e89cb1452a6a9e673cc10fa9 /cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-SplitRG/shard-0/SplitLargeReadGroup/445d787b-b780-4843-8b31-2948f719a83c/call-SamSplitter/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2025-07-29 16:16:46,44] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CollectQualityYieldMetrics:0:1]: [38;5;5mjava -Xms2000m -Xmx3000m -jar /usr/picard/picard.jar \
+  CollectQualityYieldMetrics \
+  INPUT=/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/inputs/-1455029170/SRR32255563_blend_seq_ILMN.unmapped.bam \
+  OQ=true \
+  OUTPUT=SRR32255563_blend_seq_ILMN.unmapped.quality_yield_metrics[0m
+[2025-07-29 16:16:46,45] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CollectQualityYieldMetrics:0:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0:/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0:delegated \
+  us.gcr.io/broad-gotc-prod/picard-cloud@sha256:e5ad5339080c3107c04e4a4d000b8ab06f472b77019debc3ff75499d28995b0c /cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/execution/docker_cid[0m)
+
+# remove the container after waiting
+docker rm [38;5;5mcat /tmp/15674660912118256777/cromwell-executions/WholeGenomeGermlineSingleSample/582d64a0-a1a8-40b8-8e0e-e82351b99da2/call-UnmappedBamToAlignedBam/UnmappedBamToAlignedBam/cc64541c-9be8-466f-b8b2-dd7a364c7267/call-CollectQualityYieldMetrics/shard-0/execution/docker_cid[0m
+
+# return exit code
+exit $rc
+[2025-07-29 16:16:47,42] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CollectQualityYieldMetrics:0:1]: job id: 477576
+[2025-07-29 16:16:47,42] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m445d787b[0mSplitLargeReadGroup.SamSplitter:NA:1]: job id: 477560
+[2025-07-29 16:16:47,42] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mcc64541c[0mUnmappedBamToAlignedBam.CollectQualityYieldMetrics:0:1]: Status change from - to WaitingForReturnCode
+[2025-07-29 16:16:47,42] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2m445d787b[0mSplitLargeReadGroup.SamSplitter:NA:1]: Status change from - to WaitingForReturnCode

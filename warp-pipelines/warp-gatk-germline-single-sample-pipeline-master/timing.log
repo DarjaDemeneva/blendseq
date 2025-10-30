@@ -1,0 +1,29 @@
+Picked up _JAVA_OPTIONS: -Dgroup_id=1028
+Picked up _JAVA_OPTIONS: -Dgroup_id=1028
+Workflow 0412e443-eec0-4a80-931f-90d719b90b74 transitioned to state Failed
+ERROR: problems running command: [java, -Duser_id=1027 -Dgroup_id=1028 -Dconfig.file=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell.conf, -jar, /home/darja/.dockstore/libraries/cromwell-84.jar, run, --inputs, /tmp/foo14597743640539766710json, /tmp/15383901517647628338/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl] (Exit value: 1)
+ERROR: problems running command: [java, -Duser_id=1027 -Dgroup_id=1028 -Dconfig.file=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell.conf, -jar, /home/darja/.dockstore/libraries/cromwell-84.jar, run, --inputs, /tmp/foo14597743640539766710json, /tmp/15383901517647628338/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl] (Exit value: 1)
+Command exited with non-zero status 3
+	Command being timed: "bash /home/darja/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-02.sh"
+	User time (seconds): 278.99
+	System time (seconds): 420.85
+	Percent of CPU this job got: 7%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:38:29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1789640
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 798641
+	Voluntary context switches: 3159419
+	Involuntary context switches: 22463
+	Swaps: 0
+	File system inputs: 10590824
+	File system outputs: 1085704760
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 3
