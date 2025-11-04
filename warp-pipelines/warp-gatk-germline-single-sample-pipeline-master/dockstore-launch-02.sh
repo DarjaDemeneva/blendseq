@@ -16,8 +16,10 @@ id
 
 # Set temporary directory location 
 export TMPDIR=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp
+export _JAVA_OPTIONS="-Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp"
+Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp
+echo $_JAVA_OPTIONS
 echo $TMPDIR
-export _JAVA_OPTIONS="-Djava.io.tmpdir=$TMPDIR"
 
 # Set user and group ID as explicit variables for Cromwell to map user 
 export USER_ID=$(id -u)
