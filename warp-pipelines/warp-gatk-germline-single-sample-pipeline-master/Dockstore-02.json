@@ -62,12 +62,9 @@
 
   "WholeGenomeGermlineSingleSample.cloud_provider": "gcp",
   "WholeGenomeGermlineSingleSample.BamToGvcf.HaplotypeCallerGATK4.memory_multiplier": 2,
-
+  
   "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.cpu": 48,
-  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SplitRG.SamToFastqAndDragmapAndMba.memory_mb": 12800,
-  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SplitRG.SamToFastqAndDragmapAndMba.cpu": 48,
   "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SplitRG.SamToFastqAndDragmapAndMba.disk_multiplier": 2,
-  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.memory_mb": 12800,
   "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.disk_multiplier": 2
 
 }
