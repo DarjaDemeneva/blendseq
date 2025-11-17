@@ -1,4 +1,9 @@
 */data/
 /data/
 */tmp/
-
+*/cromwell-input/*
+*/cromwell/*
+*/tmp/*
+warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell-input/*
+warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell/
+warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/

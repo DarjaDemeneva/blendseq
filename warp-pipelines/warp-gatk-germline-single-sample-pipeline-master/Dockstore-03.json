@@ -13,16 +13,16 @@
       "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/indels-and-index/Mills_and_1000G_gold_standard.indels.hg38.vcf.tbi"
     ],
     "reference_fasta": {
-      "ref_fasta": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta",
-      "ref_dict": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.dict",
-      "ref_alt": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.alt",
-      "ref_ann": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.ann",
-      "ref_sa": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.sa",
-      "ref_amb": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.amb",
+      "ref_fasta": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta",
+      "ref_dict": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.dict",
+      "ref_alt": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.alt",
+      "ref_ann": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.ann",
+      "ref_sa": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.sa",
+      "ref_amb": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.amb",
       "ref_str": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.str",
-      "ref_pac": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.pac",
-      "ref_bwt": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.64.bwt",
-      "ref_fasta_index": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta.fai"
+      "ref_pac": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.pac",
+      "ref_bwt": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.64.bwt",
+      "ref_fasta_index": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/dragmap-ref/Homo_sapiens_assembly38_masked.fasta.fai"
     },
     "contamination_sites_ud": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/contamination/1000g.phase3.100k.b38.vcf.gz.dat.UD",
     "contamination_sites_mu": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/contamination/1000g.phase3.100k.b38.vcf.gz.dat.mu",
@@ -31,13 +31,13 @@
   },
   
   "WholeGenomeGermlineSingleSample.sample_and_unmapped_bams": {
-    "final_gvcf_base_name": "SRR32255563_blend_seq_ILMN_wggss_dragen_max_qual_01",
+    "final_gvcf_base_name": "ERR3684866_ILMN_wggss_dragen_max_qual_01",
     "unmapped_bam_suffix": ".unmapped.bam",
     "flowcell_unmapped_bams": [
-      "/mnt/nas1/projects/lasr/blendseq/data/unaligned-bam/SRR32255563_blend_seq_ILMN.unmapped.bam"
+      "/mnt/nas1/projects/lasr/blendseq/data/unaligned-bam/ERR3684866_ILMN.unmapped.bam"
     ],
     "sample_name": "HG002",
-    "base_file_name": "SRR32255563_blend_seq_ILMN"
+    "base_file_name": "ERR3684866_ILMN"
   },
   
   "WholeGenomeGermlineSingleSample.wgs_coverage_interval_list": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list",
