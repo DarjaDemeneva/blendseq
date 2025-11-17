@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #=============================================================================
-# Script for locally running the WARP GATK Whole Genome Germline Single Sample Pipeline (pulling WDL script from Github)
+# Script for locally running the WARP GATK Whole Genome Germline Single Sample Pipeline (local WDL script) 
 # Author: Darja 
 # Generated for bioinformatics analysis
-# Date: 25.07.2025
+# Date: 14.11.2025
 #=============================================================================
 
 # This is for getting some run information prior to script execution
@@ -27,7 +27,7 @@ export _JAVA_OPTIONS="-Duser_id=$(id -u) -Dgroup_id=$(id -g) -Djava.io.tmpdir=${
 
 # Launching workflow (pulling the latest version from github) 
 dockstore workflow launch \
-    --entry github.com/broadinstitute/warp/WholeGenomeGermlineSingleSample:master \
+    --local-entry /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl \
     --json /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/Dockstore-03.json  
 
 # Launching script

@@ -9,11 +9,14 @@
 
 
 # Declare input FASTQ file variables
-FASTQ1="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_1.fastq.gz"
-FASTQ2="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_2.fastq.gz"
+# FASTQ1="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_1.fastq.gz"
+# FASTQ2="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_2.fastq.gz"
+
+FASTQ1="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3684866_1.fastq.gz"
+FASTQ2="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3684866_2.fastq.gz"
 
 # Declare output BAM file and sample metadata
-OUTPUT_BAM="/home/darja/nas1/blendseq/data/unaligned-bam/SRR32255563_blend_seq_ILMN.unmapped.bam"
+OUTPUT_BAM="/home/darja/nas1/blendseq/data/unaligned-bam/ERR3684866_ILMN.unmapped.bam"
 READ_GROUP_NAME="HG002_ilmn"
 SAMPLE_NAME="HG002"
 LIBRARY_NAME="LB01"
