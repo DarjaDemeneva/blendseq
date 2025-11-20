@@ -1,2 +1,28 @@
 Picked up _JAVA_OPTIONS: -Duser_id=1027 -Dgroup_id=1028 -Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/   
 Picked up _JAVA_OPTIONS: -Duser_id=1027 -Dgroup_id=1028 -Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/   
+Workflow 23ac4af5-3726-4fe9-8a51-09da0e290772 transitioned to state Failed
+ERROR: problems running command: [java, -Duser_id=1027 -Dgroup_id=1028 -Dconfig.file=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell.conf, -jar, /home/darja/.dockstore/libraries/cromwell-91.jar, run, --inputs, /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/foo5764932743872759954json, /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl] (Exit value: 1)
+ERROR: problems running command: [java, -Duser_id=1027 -Dgroup_id=1028 -Dconfig.file=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell.conf, -jar, /home/darja/.dockstore/libraries/cromwell-91.jar, run, --inputs, /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/foo5764932743872759954json, /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl] (Exit value: 1)
+	Command being timed: "bash /home/darja/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-03.sh"
+	User time (seconds): 3467.91
+	System time (seconds): 4600.30
+	Percent of CPU this job got: 3%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 64:32:26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1936856
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 205
+	Minor (reclaiming a frame) page faults: 867644
+	Voluntary context switches: 103945266
+	Involuntary context switches: 5261287
+	Swaps: 0
+	File system inputs: 1557015880
+	File system outputs: 1882105592
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
