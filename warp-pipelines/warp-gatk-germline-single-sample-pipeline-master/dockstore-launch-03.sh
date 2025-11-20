@@ -30,8 +30,10 @@ dockstore workflow launch \
     --local-entry /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl \
     --json /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/Dockstore-03.json  
 
+echo "Workflow complete" 
+
 # Launching script
 # tmux new -s gatk 
 # conda activate wdl
 # cd ~/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master
-# /usr/bin/time -v bash /home/darja/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-02.sh > full_log-N.log 2> timing.log
+# /usr/bin/time -v bash /home/darja/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-03.sh > full_log-N.log 2> timing.log
