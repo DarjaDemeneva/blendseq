@@ -1,0 +1,1 @@
+	Picked up _JAVA_OPTIONS: -Duser_id=1027 -Dgroup_id=1028 -Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/   

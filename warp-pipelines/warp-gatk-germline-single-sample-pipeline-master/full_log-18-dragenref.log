@@ -5,7 +5,7 @@ uid=1027(darja) gid=1028(darja) groups=1028(darja),27(sudo),988(docker),1039(las
 /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/
 Running with Cromwell 91 , Dockstore tests with 84
 Created temporary working directory at '/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/9465568812502712941'
-Using local file '/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl' as primary descriptor
+Using local file '/mnt/nas1/projects/lasrline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl' as primary descriptor
 Creating directories for run of Dockstore launcher in current working directory: /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs
 Provisioning your input files to your local machine
 Downloading: WholeGenomeGermlineSingleSample.wgs_coverage_interval_list from /mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list to: /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell-input/0b39b019-27a0-4519-bf7f-f7aa7420d318/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list
