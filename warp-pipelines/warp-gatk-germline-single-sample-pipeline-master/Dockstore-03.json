@@ -31,13 +31,13 @@
   },
   
   "WholeGenomeGermlineSingleSample.sample_and_unmapped_bams": {
-    "final_gvcf_base_name": "ERR3684866_ILMN_wggss_dragen_max_qual_01",
+    "final_gvcf_base_name": "sorted-SRR32255563_ILMN_wggss_dragen_max_qual_01",
     "unmapped_bam_suffix": ".unmapped.bam",
     "flowcell_unmapped_bams": [
-      "/mnt/nas1/projects/lasr/blendseq/data/unaligned-bam/ERR3684866_ILMN.unmapped.bam"
+      "/mnt/nas1/projects/lasr/blendseq/data/unaligned-bam/sorted-SRR32255563_ILMN.unmapped.bam"
     ],
     "sample_name": "HG002",
-    "base_file_name": "ERR3684866_ILMN"
+    "base_file_name": "sorted-SRR32255563_ILMN"
   },
   
   "WholeGenomeGermlineSingleSample.wgs_coverage_interval_list": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/intervals/wgs_coverage_regions.hg38.interval_list",
