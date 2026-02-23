@@ -1,0 +1,10 @@
+{
+    "read_from_cache": true,
+    "write_to_cache": true,
+    "localization_optional": true,
+    "use_relative_output_paths": true,
+    "final_workflow_outputs_dir": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/run-results",
+    "final_workflow_outputs_dir_metadata": "source",
+    "final_workflow_log_dir": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/run-logs",
+    "final_call_logs_dir": "/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/call-logs"  
+}

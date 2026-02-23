@@ -1,23 +1,21 @@
-Picked up _JAVA_OPTIONS: -Duser_id=1027 -Dgroup_id=1028 -Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/   
-Picked up _JAVA_OPTIONS: -Duser_id=1027 -Dgroup_id=1028 -Djava.io.tmpdir=/mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/   
-	Command being timed: "bash /home/darja/nas-lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-03.sh"
-	User time (seconds): 2902.54
-	System time (seconds): 3341.26
-	Percent of CPU this job got: 3%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 54:02:26
+	Command being timed: "bash /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/dockstore-launch-03.sh"
+	User time (seconds): 5.67
+	System time (seconds): 0.71
+	Percent of CPU this job got: 252%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.53
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 2060040
+	Maximum resident set size (kbytes): 185056
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 924437
-	Voluntary context switches: 75772213
-	Involuntary context switches: 4418644
+	Minor (reclaiming a frame) page faults: 58302
+	Voluntary context switches: 17204
+	Involuntary context switches: 28
 	Swaps: 0
-	File system inputs: 563909632
-	File system outputs: 737480408
+	File system inputs: 0
+	File system outputs: 120
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0

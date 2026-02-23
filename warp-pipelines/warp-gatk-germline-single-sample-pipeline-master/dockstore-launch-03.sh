@@ -28,7 +28,8 @@ export _JAVA_OPTIONS="-Duser_id=$(id -u) -Dgroup_id=$(id -g) -Djava.io.tmpdir=${
 # Launching workflow (pulling the latest version from github) 
 dockstore workflow launch \
     --local-entry /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/pipelines/wdl/dna_seq/germline/single_sample/wgs/WholeGenomeGermlineSingleSample.wdl \
-    --json /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/Dockstore-03.json  
+    --json /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/Dockstore-03.json \
+    --workflow-options /mnt/nas1/projects/lasr/blendseq/warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/workflow-options.json   
 
 echo "Workflow complete" 
 
