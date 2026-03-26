@@ -16,12 +16,11 @@ FASTQ1="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3687419_1.fastq.gz"
 FASTQ2="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3687419_2.fastq.gz"
 
 # Declare output BAM file and sample metadata
-OUTPUT_BAM="/home/darja/nas1/blendseq/data/unaligned-bam/sorted-ERR3687419_ILMN.unmapped.bam"
-READ_GROUP_NAME="HG002_ilmn"
-SAMPLE_NAME="HG002"
+OUTPUT_BAM="/home/darja/nas1/blendseq/data/unaligned-bam/ERR3687419_ILMN.unmapped.bam"
+READ_GROUP_NAME="HG005_ilmn"
+SAMPLE_NAME="HG005"
 LIBRARY_NAME="LB01"
 PLATFORM="illumina"
-SEQUENCING_CENTER="BROAD_INSTITUTE"
 
 # Run Picard FastqToSam
 picard FastqToSam \
@@ -32,5 +31,4 @@ picard FastqToSam \
     SAMPLE_NAME=$SAMPLE_NAME \
     LIBRARY_NAME=$LIBRARY_NAME \
     PLATFORM=$PLATFORM \
-    SEQUENCING_CENTER=$SEQUENCING_CENTER \
     SORT_ORDER="queryname"

@@ -9,18 +9,19 @@
 
 
 # Declare input FASTQ file variables
-FASTQ1="/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/simulated1.fq"
-FASTQ2="/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/simulated2.fq"
+FASTQ1="/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/sim2/simulated1.fq"
+FASTQ2="/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/sim2/simulated2.fq"
 
 # Declare output BAM file and sample metadata
-OUTPUT_BAM="/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/synthetic_ILMN.unmapped.bam"
-READ_GROUP_NAME="HG002_ilmn"
-SAMPLE_NAME="HG002"
+OUTPUT_BAM="/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/synthetic-input-reads/sim2/synthetic_ILMN.unmapped.bam"
+READ_GROUP_NAME="synthetic_ILMN"
+SAMPLE_NAME="sim2"
 LIBRARY_NAME="LB01"
 PLATFORM="illumina"
 SEQUENCING_CENTER="BROAD_INSTITUTE"
+
 # adding the referenece sequence variable to hopefully have the @SQ in the bam file header - not used - can remove or leave for my own reference - no effect on output file 
-REFERENCE="/home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta"
+REFERENCE="/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta"
 
 # Run Picard FastqToSam
 picard FastqToSam \
@@ -32,4 +33,5 @@ picard FastqToSam \
     LIBRARY_NAME=$LIBRARY_NAME \
     PLATFORM=$PLATFORM \
     SEQUENCING_CENTER=$SEQUENCING_CENTER \
-    REFERENCE_SEQUENCE=$REFERENCE \
+    SORT_ORDER="queryname" \
+    REFERENCE_SEQUENCE=$REFERENCE

@@ -8,11 +8,11 @@
 #=============================================================================
 
 # Declare input FASTQ file variables
-FASTQ1="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_1.fastq.gz"
-FASTQ2="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_2.fastq.gz"
+FASTQ1="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3684866_1.fastq.gz"
+FASTQ2="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3684866_2.fastq.gz"
 
 # Declare output report directory 
-OUTPUT_DIR="/home/darja/nas1/blendseq/data/fastqc-reports"
+OUTPUT_DIR="/mnt/nas1/projects/lasr/blendseq/warp-pipelines/data/fastqc_reports/ERR3684866_HG002"
 
 # Number of CPU threads to use 
 THREADS=16

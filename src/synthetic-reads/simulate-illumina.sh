@@ -7,16 +7,17 @@
 # Date: 07.08.2025
 #=============================================================================
 
-conda activate simulate
+# conda activate simulate
 
 art_illumina \
-  -ss HS25 \
+  -ss HS20 \
   -i /home/darja/nas1/blendseq/warp-pipelines/data/warp-gatk-dragen-input-files-01/reference-and-index/Homo_sapiens_assembly38.fasta \
-  -l 150 \
-  -f 2 \ # specify low 
+  -l 100 \
+  -f 20 \
   -p \
-  -m 300 \
-  -s 10 \
+  -m 500 \
+  -s 50 \
+  -na \
   -o simulated 
 
-# specify low coverage x2 using the -f flag 
+ 
