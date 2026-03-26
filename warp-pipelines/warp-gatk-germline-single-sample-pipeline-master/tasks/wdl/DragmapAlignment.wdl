@@ -34,7 +34,7 @@ task SamToFastqAndDragmapAndMba {
     String docker = "us.gcr.io/broad-gotc-prod/dragmap:1.1.2-1.2.1-2.26.10-1.11-1643839530"
     Int cpu = 16
     Float disk_multiplier = 8
-    Int memory_mb = 40960
+    Int memory_mb = 368640
   }
 
   Float unmapped_bam_size = size(input_bam, "GiB")
@@ -56,7 +56,7 @@ task SamToFastqAndDragmapAndMba {
     mv ~{dragmap_reference.reference_bin} ~{dragmap_reference.hash_table_cfg_bin} ~{dragmap_reference.hash_table_cmp} dragen_reference
 
     dragen-os -b ~{input_bam} -r dragen_reference --interleaved=1 --preserve-map-align-order true 2> >(tee ~{output_bam_basename}.dragmap.stderr.log >&2) | samtools view -h -O BAM - > aligned.bam
-    java -Dsamjdk.compression_level=~{compression_level} -Xms1000m -Xmx1000m -jar /picard/picard.jar \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -Xmx300g -jar /picard/picard.jar \
       MergeBamAlignment \
       VALIDATION_STRINGENCY=SILENT \
       EXPECTED_ORIENTATIONS=FR \

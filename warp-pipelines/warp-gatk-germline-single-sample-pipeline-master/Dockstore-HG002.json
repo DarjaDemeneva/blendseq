@@ -64,6 +64,7 @@
   "WholeGenomeGermlineSingleSample.BamToGvcf.HaplotypeCallerGATK4.memory_multiplier": 2,
   
   "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SplitRG.SamToFastqAndDragmapAndMba.disk_multiplier": 1.5,
-  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.disk_multiplier": 1.5
+  "WholeGenomeGermlineSingleSample.UnmappedBamToAlignedBam.SamToFastqAndDragmapAndMba.disk_multiplier": 1.5,  
+  "WholeGenomeGermlineSingleSample.provide_bam_output": true
 
 }

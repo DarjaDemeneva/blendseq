@@ -53,7 +53,7 @@ task CalibrateDragstrModel {
 
   command <<<
     set -x
-    gatk --java-options "-Xmx~{java_memory_mb}m -DGATK_STACKTRACE_ON_USER_EXCEPTION=true -Dsamjdk.reference_fasta=~{ref_fasta}" \
+    gatk --java-options "-Xmx250g -DGATK_STACKTRACE_ON_USER_EXCEPTION=true -Dsamjdk.reference_fasta=~{ref_fasta}" \
       CalibrateDragstrModel \
         -R ~{ref_fasta} \
         -I ~{alignment} \
@@ -66,7 +66,7 @@ task CalibrateDragstrModel {
   runtime {
      docker: docker
      disks: "local-disk " + disk_size_gb + (if use_ssd then " SSD" else " HDD")
-     memory: runtime_memory_mb + " MiB"
+     memory: "300 GiB"
      preemptible: preemptible_tries
      cpu: java_threads
   }

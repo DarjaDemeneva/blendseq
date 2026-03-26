@@ -148,7 +148,7 @@ task ConvertToCram {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/samtools:1.0.0-1.11-1624651616"
     preemptible: preemptible_tries
-    memory: "3 GiB"
+    memory: "300 GiB"
     cpu: "1"
     disks: "local-disk " + disk_size + " HDD"
   }
@@ -179,8 +179,8 @@ task ConvertToBam {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/samtools:1.0.0-1.11-1624651616"
     preemptible: 3
-    memory: "3 GiB"
-    cpu: "1"
+    memory: "300 GiB"
+    cpu: "64"
     disks: "local-disk 200 HDD"
   }
   output {

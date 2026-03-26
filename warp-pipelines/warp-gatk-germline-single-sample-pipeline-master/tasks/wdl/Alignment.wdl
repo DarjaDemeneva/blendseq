@@ -64,7 +64,7 @@ task SamToFastqAndBwaMemAndMba {
     bash_ref_fasta=~{reference_fasta.ref_fasta}
     # if reference_fasta.ref_alt has data in it or allow_empty_ref_alt is set
     if [ -s ~{reference_fasta.ref_alt} ] || ~{allow_empty_ref_alt}; then
-      java -Xms1000m -Xmx1000m -jar /usr/gitc/picard.jar \
+      java -Xms10000m -Xmx10000m -jar /usr/gitc/picard.jar \
         SamToFastq \
         INPUT=~{input_bam} \
         FASTQ=/dev/stdout \
@@ -144,7 +144,7 @@ task SamSplitter {
 
     total_reads=$(samtools view -c ~{input_bam})
 
-    java -Dsamjdk.compression_level=~{compression_level} -Xms3000m -Xmx3600m -jar /usr/gitc/picard.jar SplitSamByNumberOfReads \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -Xmx300g -jar /usr/gitc/picard.jar SplitSamByNumberOfReads \
       INPUT=~{input_bam} \
       OUTPUT=output_dir \
       SPLIT_TO_N_READS=~{n_reads} \
@@ -156,7 +156,7 @@ task SamSplitter {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/samtools-picard-bwa:1.0.2-0.7.15-2.26.10-1643840748"
     preemptible: preemptible_tries
-    memory: "3.75 GiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
   }
 }

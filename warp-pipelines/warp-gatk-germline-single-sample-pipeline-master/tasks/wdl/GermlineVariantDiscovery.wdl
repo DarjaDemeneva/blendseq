@@ -139,7 +139,7 @@ task HaplotypeCaller_GATK4_VCF {
     echo Total available memory: ${available_memory_mb} MB >&2
     echo Memory reserved for Java: ${java_memory_size_mb} MB >&2
 
-    gatk --java-options "-Xmx150000m -Xms150000m -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
+    gatk --java-options "-Xmx300g -Xms300g -XX:GCTimeLimit=50 -XX:GCHeapFreeLimit=10" \
       HaplotypeCaller \
       -R ~{ref_fasta} \
       -I ~{input_bam} \
@@ -162,7 +162,7 @@ task HaplotypeCaller_GATK4_VCF {
     docker: gatk_docker
     preemptible: preemptible_tries
     memory: "~{memory_size_mb} MiB"
-    cpu: "2"
+    cpu: "64"
     bootDiskSizeGb: 15
     disks: "local-disk " + disk_size + " HDD"
   }
@@ -190,7 +190,7 @@ task MergeVCFs {
   # Using MergeVcfs instead of GatherVcfs so we can create indices
   # See https://github.com/broadinstitute/picard/issues/789 for relevant GatherVcfs ticket
   command {
-    java -Xms2000m -Xmx2500m -jar /usr/picard/picard.jar \
+    java -Xms300g -Xmx300g -jar /usr/picard/picard.jar \
       MergeVcfs \
       INPUT=~{sep=' INPUT=' input_vcfs} \
       OUTPUT=~{output_vcf_name}
@@ -198,7 +198,7 @@ task MergeVCFs {
   runtime {
     docker: docker
     preemptible: preemptible_tries
-    memory: "3000 MiB"
+    memory: "300 GiB"
     disks: "local-disk ~{disk_size} HDD"
   }
   output {
@@ -235,7 +235,7 @@ task Reblock {
     ln -s ~{gvcf} $(basename ~{gvcf})
     ln -s ~{gvcf_index} $(basename ~{gvcf_index})
 
-    gatk --java-options "-Xms3000m -Xmx3000m" \
+    gatk --java-options "-Xms300g -Xmx300g" \
       ReblockGVCF \
       -R ~{ref_fasta} \
       -V $(basename ~{gvcf}) \
@@ -249,7 +249,7 @@ task Reblock {
   }
 
   runtime {
-    memory: "3750 MiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
     bootDiskSizeGb: 15
     preemptible: 3
@@ -276,7 +276,7 @@ task HardFilterVcf {
   String output_vcf_name = vcf_basename + ".filtered.vcf.gz"
 
   command {
-    gatk --java-options "-Xms2000m -Xmx2500m" \
+    gatk --java-options "-Xms300g -Xmx300g" \
       VariantFiltration \
       -V ~{input_vcf} \
       -L ~{interval_list} \
@@ -291,7 +291,7 @@ task HardFilterVcf {
   runtime {
     docker: gatk_docker
     preemptible: preemptible_tries
-    memory: "3000 MiB"
+    memory: "300 GiB"
     bootDiskSizeGb: 15
     disks: "local-disk " + disk_size + " HDD"
   }
@@ -314,7 +314,7 @@ task DragenHardFilterVcf {
   String output_vcf_name = vcf_basename + ".hard-filtered" + output_suffix
 
   command {
-     gatk --java-options "-Xms2000m -Xmx2500m" \
+     gatk --java-options "-Xms300g -Xmx300g" \
       VariantFiltration \
       -V ~{input_vcf} \
       --filter-expression "QUAL < 10.4139" \
@@ -328,7 +328,7 @@ task DragenHardFilterVcf {
   runtime {
     docker: gatk_docker
     preemptible: preemptible_tries
-    memory: "3000 MiB"
+    memory: "300 GiB"
     bootDiskSizeGb: 15
     disks: "local-disk " + disk_size + " HDD"
   }

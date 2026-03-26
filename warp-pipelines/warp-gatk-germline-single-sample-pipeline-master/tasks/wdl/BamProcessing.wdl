@@ -37,7 +37,7 @@ task SortSam {
   Int java_inital_memory_mb = machine_mem_mb - 1000
 
   command {
-    java -Dsamjdk.compression_level=~{compression_level} -Xms~{java_inital_memory_mb}m -Xmx~{java_max_memory_mb}m -jar /usr/picard/picard.jar \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -Xmx300g -jar /usr/picard/picard.jar \
       SortSam \
       INPUT=~{input_bam} \
       OUTPUT=~{output_bam_basename}.bam \
@@ -50,8 +50,8 @@ task SortSam {
   runtime {
     docker: docker
     disks: "local-disk " + disk_size + " HDD"
-    cpu: "1"
-    memory: "${machine_mem_mb} MiB"
+    cpu: "64"
+    memory: "300 GiB"
     preemptible: preemptible_tries
   }
   output {
@@ -95,7 +95,7 @@ task MarkDuplicates {
   # While query-grouped isn't actually query-sorted, it's good enough for MarkDuplicates with ASSUME_SORT_ORDER="queryname"
 
   command {
-    java -Dsamjdk.compression_level=~{compression_level} -Xms~{java_memory_size}g -jar /usr/picard/picard.jar \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -jar /usr/picard/picard.jar \
       MarkDuplicates \
       INPUT=~{sep=' INPUT=' input_bams} \
       OUTPUT=~{output_bam_basename}.bam \
@@ -111,7 +111,7 @@ task MarkDuplicates {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/picard-cloud:2.26.10"
     preemptible: preemptible_tries
-    memory: "~{memory_size} GiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
   }
   output {
@@ -287,7 +287,7 @@ task GatherSortedBamFiles {
   Int java_inital_memory_mb = machine_mem_mb - 1000
 
   command {
-    java -Dsamjdk.compression_level=~{compression_level} -Xms~{java_inital_memory_mb}m -Xmx~{java_max_memory_mb}m -jar /usr/picard/picard.jar \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -Xmx300g -jar /usr/picard/picard.jar \
       GatherBamFiles \
       INPUT=~{sep=' INPUT=' input_bams} \
       OUTPUT=~{output_bam_basename}.bam \
@@ -297,7 +297,7 @@ task GatherSortedBamFiles {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/picard-cloud:2.26.10"
     preemptible: preemptible_tries
-    memory: "${machine_mem_mb} MiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
   }
   output {
@@ -322,7 +322,7 @@ task GatherUnsortedBamFiles {
   Int disk_size = ceil(2 * total_input_size) + 20
 
   command {
-    java -Dsamjdk.compression_level=~{compression_level} -Xms2000m -Xmx2500m -jar /usr/picard/picard.jar \
+    java -Dsamjdk.compression_level=~{compression_level} -Xms300g -Xmx300g -jar /usr/picard/picard.jar \
       GatherBamFiles \
       INPUT=~{sep=' INPUT=' input_bams} \
       OUTPUT=~{output_bam_basename}.bam \
@@ -332,7 +332,7 @@ task GatherUnsortedBamFiles {
   runtime {
     docker: "us.gcr.io/broad-gotc-prod/picard-cloud:2.26.10"
     preemptible: preemptible_tries
-    memory: "3 GiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
   }
   output {
@@ -381,7 +381,7 @@ task GenerateSubsettedContaminationResources {
   >>>
   runtime {
     preemptible: preemptible_tries
-    memory: "3.5 GiB"
+    memory: "300 GiB"
     disks: "local-disk 10 HDD"
     docker: "us.gcr.io/broad-gotc-prod/bedtools:2.27.1"
   }
@@ -466,10 +466,10 @@ task CheckContamination {
   >>>
   runtime {
     preemptible: preemptible_tries
-    memory: "7.5 GiB"
+    memory: "300 GiB"
     disks: "local-disk " + disk_size + " HDD"
     docker: docker
-    cpu: 2
+    cpu: 64
   }
   output {
     File selfSM = "~{output_prefix}.selfSM"
