@@ -4,6 +4,11 @@
 warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell-input/*
 warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/cromwell/
 warp-pipelines/warp-gatk-germline-single-sample-pipeline-master/tmp/
+*/cromwell-executions1/*
+cromwell-executions1/
+cromwell-input/ 
+*/tmp/
+*/cromwell-input/*
 *.fastq
 *.fastq.gz
 *.bam

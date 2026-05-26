@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #=============================================================================
-# Picard FastqToSam script for converting raw Illumina paired-end FASTQ reads inot unmapped BAM (uBAM) fo GATK Whole Genome Germline Single Sample pipeline
+# Picard FastqToSam script for converting raw Illumina paired-end FASTQ reads into unmapped BAM (uBAM) fo GATK Whole Genome Germline Single Sample pipeline
 # Author: Darja 
 # Generated for bioinformatics analysis
 # Date: 22.07.2025
@@ -9,9 +9,6 @@
 
 
 # Declare input FASTQ file variables
-# FASTQ1="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_1.fastq.gz"
-# FASTQ2="/home/darja/nas1/blendseq/data/raw-sequence-files/reads-ilmn/SRR32255563_blend-seq_ILMN_NVX_Reads_2.fastq.gz"
-
 FASTQ1="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3687419_1.fastq.gz"
 FASTQ2="/mnt/nas1/projects/lasr/Illumina_Pipline/Data/ERR3687419_2.fastq.gz"
 
